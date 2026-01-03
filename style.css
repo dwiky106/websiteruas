@@ -1,0 +1,862 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: #f8f9fc;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #1e40af;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #facc15;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #1e40af, #2563eb);
+    color: white;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #facc15;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Section */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section.alt {
+    background: #eef2ff;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Keunggulan */
+.keunggulan {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.keunggulan li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* WhatsApp Button */
+.wa-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #1e40af;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navbar nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+
+/* Logo Universitas */
+.logo-univ {
+    background: #f8f9fc;
+    padding: 30px 20px;
+}
+
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    align-items: center;
+}
+
+
+.logo-box {
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 30%;
+    padding: 15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ===== Logo Universitas Animasi ===== */
+.logo-univ {
+    background: #f8f9fc;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+.logo-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e40af;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: scrollLogo 25s linear infinite;
+}
+
+/* Pause saat hover / sentuh */
+.logo-slider:hover .logo-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLogo {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.logo-box {
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 30%;
+    padding: 15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* floating animation */
+    animation: float 3s ease-in-out infinite;
+}
+
+.logo-box img {
+    max-width: 60px;
+    height: auto;
+}
+
+/* Floating efek */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===== Metode Ruang Belajar ===== */
+.metode-belajar {
+    background: #f8f9fc;
+}
+
+.sub-title {
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+.metode-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.metode-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.metode-card:hover {
+    transform: translateY(-6px);
+}
+
+.metode-card h3 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+
+/* Coming Soon */
+.coming-soon {
+    opacity: 0.6;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 15px;
+    background: #e5e7eb;
+    color: #555;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Tombol Daftar */
+.daftar-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.daftar-btn:hover {
+    background: #16a34a;
+}
+
+/* ===== Kenapa Pilih Kami ===== */
+.why-us {
+    padding: 70px 20px;
+    background: linear-gradient(180deg, #eef2ff, #f8f9fc);
+    text-align: center;
+}
+
+.why-us h2 {
+    color: #1e40af;
+    font-size: 32px;
+}
+
+.why-desc {
+    max-width: 600px;
+    margin: 15px auto 50px;
+    color: #555;
+    font-size: 16px;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.why-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(30,64,175,0.25);
+}
+
+.why-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    color: #1e40af;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.why-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+/* Highlight Card */
+.why-card.highlight {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+}
+
+.why-card.highlight h3,
+.why-card.highlight p {
+    color: white;
+}
+
+.why-card.highlight .why-icon {
+    font-size: 45px;
+}
+
+/* ===== Tutor Ruang Sarjana ===== */
+.tutor-section {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.tutor-section h2 {
+    color: #1e40af;
+    font-size: 32px;
+}
+
+.tutor-desc {
+    margin: 15px auto 50px;
+    max-width: 600px;
+    color: #555;
+}
+
+.tutor-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.tutor-card {
+    background: #f8f9fc;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease;
+}
+
+.tutor-card:hover {
+    transform: translateY(-10px);
+}
+
+.tutor-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.tutor-card h3 {
+    color: #1e40af;
+    margin-bottom: 5px;
+}
+
+.tutor-card span {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.tutor-card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Social Media Button */
+.social-btn {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn a {
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.social-btn .ig {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social-btn .fb {
+    background: #1877f2;
+}
+
+/* ===== Testimoni Ringkas ===== */
+.testimoni-section {
+    padding: 60px 15px;
+    background: linear-gradient(180deg, #f8f9fc, #eef2ff);
+    overflow: hidden;
+    text-align: center;
+}
+
+.testimoni-section h2 {
+    font-size: 26px;
+    color: #1e40af;
+}
+
+.testimoni-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.testimoni-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimoni-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: slideTestimoni 35s linear infinite;
+}
+
+.testimoni-slider:hover .testimoni-track {
+    animation-play-state: paused;
+}
+
+@keyframes slideTestimoni {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Card */
+.testimoni-card {
+    width: 170px;
+    background: #fff;
+    padding: 16px 14px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.testimoni-card img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.testimoni-card h3 {
+    font-size: 14px;
+    color: #1e40af;
+    margin-bottom: 2px;
+}
+
+.testimoni-card span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ===== Tombol Lihat Ulasan (Lebih Menarik) ===== */
+.lihat-ulasan {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lihat-ulasan span {
+    font-size: 14px;
+}
+
+.lihat-ulasan:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(37,99,235,0.4);
+}
+
+/* ===== Popup Testimoni ===== */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.popup-content {
+    background: white;
+    max-width: 360px;
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 18px;
+    text-align: center;
+    position: relative;
+    animation: scaleIn 0.3s ease;
+}
+
+.popup-content img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.popup-content h3 {
+    color: #1e40af;
+    margin-bottom: 4px;
+}
+
+.popup-content span {
+    font-size: 13px;
+    color: #666;
+}
+
+.popup-content p {
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #666;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== Ulasan Alumni ===== */
+.ulasan-alumni {
+    background: #f8f9ff;
+    text-align: center;
+}
+
+.ulasan-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.ulasan-form {
+    max-width: 420px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ulasan-form input,
+.ulasan-form textarea {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.ulasan-form textarea {
+    resize: none;
+}
+
+.kirim-ulasan {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.kirim-ulasan:hover {
+    opacity: 0.9;
+}
+
+.ulasan-note {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: linear-gradient(135deg, #1e3a8a, #1e40af);
+    color: #e5e7eb;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-brand h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-brand span {
+    color: #facc15;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #dbeafe;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-links a {
+    display: block;
+    color: #dbeafe;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #facc15;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.footer-wa {
+    display: inline-block;
+    background: #22c55e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-wa:hover {
+    background: #16a34a;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #c7d2fe;
+}
+
+/* ===== Developer Credit ===== */
+.dev-link {
+    color: #facc15;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dev-link:hover {
+    text-decoration: underline;
+    color: #fde047;
+}
+
+/* ===== Popup Promosi ===== */
+.promo-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.promo-content {
+    position: relative;
+    max-width: 420px;
+    width: 100%;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    animation: popupFade 0.4s ease;
+}
+
+.promo-content img {
+    width: 100%;
+    display: block;
+}
+
+/* Tombol Close */
+.promo-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@keyframes popupFade {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===== Chat Tutor Bubble ===== */
+.chat-bubble {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 56px;
+    height: 56px;
+    background: #22c55e;
+    color: white;
+    font-size: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 10001;
+    animation: floatChat 2s infinite ease-in-out;
+}
+
+.chat-bubble:hover {
+    background: #16a34a;
+}
+
+/* Balon info */
+.chat-info {
+    position: fixed;
+    bottom: 95px;
+    right: 25px;
+    background: white;
+    padding: 12px 16px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    font-size: 13px;
+    display: none;
+    z-index: 10001;
+}
+
+.chat-info p {
+    margin: 0;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Animasi */
+@keyframes floatChat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
